@@ -1,0 +1,72 @@
+/* .container-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 
+} */
+
+.dark-btn {
+  position: relative;
+  width: 90%;
+  margin: 0 5%;
+  transition: all 3s;
+}
+
+.dark-btn button {
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 1;
+  transition: all 3s;
+}
+
+.dark-btn button {
+  position: absolute;
+  top: 34px;
+  right: 35px;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+}
+.mode-icons {
+  width: 35px;
+  height: 35px;
+  color: azure;
+  transition: all 3s;
+  display: inline-block;
+  outline: none;
+}
+.moon {
+  transform: rotateZ(220deg);
+}
+.sun {
+  color: black;
+}
+
+.logo-section img {
+  width: 140px;
+}
+
+@media (max-width:670px) {
+ .mode-icons {
+  width: 25px;
+  height: 25px;
+  
+  transition: all 3s;
+  display: inline-block;
+  outline: none;
+}
+
+.logo-section img{
+    margin-top: 10px;
+    width: 120px;
+    
+}
+
+.dark-btn {
+  position: relative;
+  width:100%;
+  margin: 0;
+  transition: all 3s;
+}
+}
+
