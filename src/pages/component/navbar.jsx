@@ -3,9 +3,10 @@ import "../style/navbar.css";
 import { FaSun, FaMoon } from "react-icons/fa";
 import DarkLogo from "../../assets/dark-mode-logo.png";
 import lightLogo from "../../assets/light-mode-logo.png";
+import { useAppContext } from "./context";
 
 const Navbar = () => {
-  const [IsDark, setIsDark] = React.useState(true);
+  const {setIsDark,IsDark} = useAppContext();
   React.useEffect(() => {
     const switchColors = () => {
       !IsDark
