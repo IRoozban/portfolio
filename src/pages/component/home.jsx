@@ -14,6 +14,7 @@ const home = () => {
 
   return (
     <div className={`home-section ${!IsDark && "dark-text"}`}>
+      <div className="layer"></div>
       <div className="banner">
         <img src={banner} alt="banner" />
       </div>
