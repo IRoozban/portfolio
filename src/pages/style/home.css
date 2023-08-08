@@ -280,7 +280,7 @@
 }
 
 
-@media (max-height:610px) {
+@media (max-height:610px) and (max-width:414px) {
    .layer{
     position: absolute;
     bottom: 0;
