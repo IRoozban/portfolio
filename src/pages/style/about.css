@@ -8,8 +8,13 @@
   height: 100%;
   color: white;
   border-radius: 10px;
-  
+
   margin: 2% 5%;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
 }
 
 .dot {
@@ -19,46 +24,141 @@
   margin: 0 2px;
   border-radius: 50%;
   transition: all 1s;
-  
 }
 
-.first-dot{
-    animation: loading 0.5s 0s ease-in-out  ;
-    transition: all 3s;
-    
+.first-dot {
+  animation: loading 0.5s 0s ease-in-out;
+  transition: all 3s;
 }
 
-.second-dot{
-    animation: loading 0.5s 0.5s ease-in-out  ;
-    transition: all 3s;
-    
+.second-dot {
+  animation: loading 0.5s 0.5s ease-in-out;
+  transition: all 3s;
 }
 
-.third-dot{
-    animation: loading 0.5s 1s ease-in-out  ;
-    transition: all 1s;
-    
+.third-dot {
+  animation: loading 0.5s 1s ease-in-out;
+  transition: all 1s;
 }
 
-.dots-container{
-    display: flex;
-    margin-top: 50px;
-    margin-bottom: 100px;
+.dots-container {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
-.text-section{
-    margin-top: 50px;
-    font-size: 2rem;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    letter-spacing: 3px;
-    
+.text-section {
+  margin-top: 50px;
+  font-size: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 3px;
+}
+
+.dot-dark {
+  background-color: #0d0d1f;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+
+  /* text-align: center; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+a {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  transform: translateY(0px);
+  transition: all 1s;
+  opacity: 0.95;
+  color: #ffffff;
+}
+
+.social-media {
+  width: 90%;
+}
+
+.logo {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #0d0d1f;
+}
+
+.text-about {
+  margin: 50px;
+}
+
+.social-icons:hover {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.skills-section {
+  width: 45%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 180px;
+  /* color: #ffffff; */
+}
+
+.React {
+  width: 45px;
+  height: 45px;
+}
+
+.sides {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media {
+  background: #0d0d1f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+}
+
+.social-media .social-icons {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  transform: translateY(0px);
+  transition: all 1s;
+  opacity: 0.95;
+}
+
+.social-icons:hover {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.dark-bg {
+  background-color: #ffffff;
+  color: #0d0d1f;
 }
 .dark-text {
   color: #0d0d1f;
 }
 
-.dot-dark{
-    background-color: #0d0d1f
+.dark-social {
+  color: #0d0d1f;
 }
 
 @keyframes loading {
@@ -66,9 +166,77 @@
     transform: translateY(0px);
   }
 
-  100%{
+  100% {
     transform: translateY(-10px);
   }
 }
+@media  (max-height: 700px) and (min-width: 900px){
+  .social-media {
+    background:#0d0d1f ;
+    height: 65px;
 
+  }
 
+  .social-icons:hover{
+    transform: translateY(-1px);
+  }
+
+ 
+  
+}
+
+@media (max-width: 900px) {
+  .main-section {
+    font-size: 30px;
+  }
+  .logo {
+    width: 130px;
+  }
+  .social-media {
+    height: 85px;
+  }
+  .social-media .social-icons {
+    width: 35px;
+    height: 35px;
+  }
+
+  .React {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-section {
+    font-size: 20px;
+    text-align: center;
+  }
+  .text-about {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+  .logo {
+    width: 120px;
+  }
+  .social-media {
+    height: 70px;
+  }
+  .React {
+    width: 25px;
+    height: 25px;
+  }
+  .social-media .social-icons {
+    width: 25px;
+    height: 25px;
+  }
+  .text-section{
+    font-size: 20px;
+  }
+}
+
+@media (max-width:330px) {
+  .main-section{
+    font-size: 15px;
+    margin: 0;
+  }
+}

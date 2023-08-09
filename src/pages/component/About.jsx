@@ -1,8 +1,17 @@
 import React from "react";
 import axios from "axios";
 import { useAppContext } from "./context";
+import {
+  FaLinkedin,
+  FaTelegram,
+  FaGithub,
+  FaTwitter,
+  FaReact,
+  FaLink,
+} from "react-icons/fa";
 import "../../axios";
 import "../style/about.css";
+import Loading from "./Loading";
 
 //url
 
@@ -24,7 +33,6 @@ const About = () => {
       setIsLoading(true);
       const res = await axios.get(url);
       setContent(res.data);
-      setIsLoading(false);
     } catch (error) {
       console.log(error.response);
     }
@@ -38,42 +46,43 @@ const About = () => {
 
   React.useEffect(() => {
     fetchData();
+    const TimeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   const { name, avatar_url, location, bio } = content;
 
   if (isLoading) {
-    return (
-      <div className={`loading-section ${IsDark || "dark-text"}`}>
-        <div className="text-section">
-          <p className="loading-text"> Please Wait</p>
-        </div>
-        <div className="dots-container">
-          <div
-            className={`dot ${IsDark || "dot-dark"} ${
-              animationOn && "first-dot"
-            }`}
-          ></div>
-          <div
-            className={`dot  ${IsDark || "dot-dark"} ${
-              animationOn && "second-dot"
-            }`}
-          ></div>
-          <div
-            className={`dot  ${IsDark || "dot-dark"} ${
-              animationOn && "third-dot"
-            }`}
-          ></div>
-        </div>
-      </div>
-    );
+    return <Loading IsDark={IsDark} animationOn={animationOn} />;
   }
 
   return (
-    <div className="main-section">
-      <img src={avatar_url} alt="ayo" />
-      <h2>{`hi my name is ${name} `}</h2>
-      <h2>I am a frontend Developer from {location}</h2>
+    <div className="sides">
+      <div className={`main-section ${IsDark || "dark-text"}`}>
+        <div className="text-about">
+          <img className="logo" src={avatar_url} alt="ayo" />
+          <p>{`hi my name is ${name} `}</p>
+          <p>I am a frontend Developer from {location}</p>
+          <p>I'm Currently Learning {<FaReact className="React" />}</p>
+          <p>I am also a {bio}</p>
+        </div>
+      </div>
+      <div className={`skills-section`}></div>
+      <div className={`social-media ${IsDark && "dark-bg"} `}>
+        <a href="https://twitter.com/IRoozban">
+          <FaTwitter className={`social-icons ${IsDark && "dark-social"}`} />
+        </a>
+        <a href="https://github.com/iliro6">
+          <FaGithub className={`social-icons ${IsDark && "dark-social"}`} />
+        </a>{" "}
+        <a href="https://www.linkedin.com/in/ilia-roozban-85111b218/">
+          <FaLinkedin className={`social-icons ${IsDark && "dark-social"}`} />
+        </a>{" "}
+        <a href="https://t.me/ilirojr">
+          <FaTelegram className={`social-icons ${IsDark && "dark-social"}`} />
+        </a>
+      </div>
     </div>
   );
 };

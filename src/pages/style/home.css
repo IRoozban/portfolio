@@ -203,6 +203,8 @@
   }
 }
 
+
+
 @media (max-width: 630px) {
   .banner img {
     width: 370px;
@@ -271,10 +273,13 @@
     width: 100%;
     height: 35%;
     margin-top: 10%;
-    background-color: #0d0d1f;
+    background-color: white;
     /* display:  ; */
     
     
+  }
+   .dark-layer{
+  background-color:#0d0d1f ;
   }
 
 }
@@ -287,12 +292,18 @@
     width: 100%;
     height: 15%;
     margin-top: 10%;
-    background-color: #0d0d1f;
+    background-color: white;
     /* display:  ; */
     
     
   }
+  
+  .dark-layer{
+  background-color:#0d0d1f ;
+  }
 }
+
+
 
 @media (max-height:500px) {
   .layer{
