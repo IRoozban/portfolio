@@ -9,12 +9,12 @@ const home = () => {
   const { IsDark, setIsDark } = useAppContext();
   const navigate = useNavigate();
   const btnHandler = () => {
-    navigate('/about');
+    navigate("/about");
   };
 
   return (
     <div className={`home-section ${!IsDark && "dark-text"}`}>
-      <div className={`layer ${!IsDark && 'dark-layer'}`}></div>
+      <div className={`layer ${!IsDark && "dark-layer"}`}></div>
       <div className="banner">
         <img src={banner} alt="banner" />
       </div>
