@@ -52,7 +52,7 @@
  .mode-icons {
   width: 25px;
   height: 25px;
-  
+  margin-right: -20px;
   transition: all 3s;
   display: inline-block;
   outline: none;

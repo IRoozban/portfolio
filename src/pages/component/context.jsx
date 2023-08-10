@@ -5,7 +5,7 @@ const GlobalContext = createContext();
 const AppContext = ({ children }) => {
   const [IsDark, setIsDark] = React.useState(false);
   const [content, setContent] = React.useState({});
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
   const [animationOn , setAnimationOn] = React.useState(true)
 
 

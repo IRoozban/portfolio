@@ -28,4 +28,4 @@ const Loading = ({IsDark,animationOn}) => {
   );
 }
 
-export default Loading
+export default React.memo(Loading);

@@ -30,7 +30,7 @@ const About = () => {
 
   const fetchData = async () => {
     try {
-      setIsLoading(true);
+      
       const res = await axios.get(url);
       setContent(res.data);
     } catch (error) {
